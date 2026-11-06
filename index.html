@@ -47,6 +47,11 @@
   :focus-visible { outline: 2px solid var(--corn); outline-offset: 2px; }
   .ouro { background: linear-gradient(180deg, #fbe7a1 0%, #e2b64a 45%, #b07d22 70%, #f1d27a 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .titulo-serif { font-family: "Marcellus SC", "Times New Roman", serif !important; font-weight: 400 !important; letter-spacing: .04em; line-height: 1 !important; }
+  @media (hover: hover) and (pointer: fine) {
+    html, body, * { cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%0A%3Cpath%20d%3D%22M16%203%20L29%2027%20H3%20Z%22%20fill%3D%22%23d4af37%22%20stroke%3D%22%23120d0e%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M16%203%20L29%2027%20H16%20Z%22%20fill%3D%22%23a67c1f%22/%3E%0A%3Cpath%20d%3D%22M16%203%20L29%2027%20H3%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23120d0e%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M9.5%2015%20H22.5%20M6.5%2021%20H25.5%22%20stroke%3D%22%23120d0e%22%20stroke-width%3D%221%22%20opacity%3D%22.45%22/%3E%0A%3C/svg%3E") 16 3, auto; }
+    a, button, select, label, [role="button"], [role="tab"], summary { cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%0A%3Cpath%20d%3D%22M16%203%20L29%2027%20H3%20Z%22%20fill%3D%22%23d4af37%22%20stroke%3D%22%23120d0e%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M16%203%20L29%2027%20H16%20Z%22%20fill%3D%22%23a67c1f%22/%3E%0A%3Cpath%20d%3D%22M16%203%20L29%2027%20H3%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23120d0e%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M9.5%2015%20H22.5%20M6.5%2021%20H25.5%22%20stroke%3D%22%23120d0e%22%20stroke-width%3D%221%22%20opacity%3D%22.45%22/%3E%0A%3Ccircle%20cx%3D%2226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23ef3b2d%22%20stroke%3D%22%23120d0e%22%20stroke-width%3D%221.5%22/%3E%3C/svg%3E") 16 3, pointer !important; }
+    input, textarea { cursor: text !important; }
+  }
   .card-poster { transition: transform .25s ease; }
   .card:hover .card-poster { transform: scale(1.04); }
   @media (prefers-reduced-motion: reduce) { .card-poster { transition: none; } .card:hover .card-poster { transform: none; } }
@@ -85,13 +90,18 @@ const FILMES = [
 const AVALIACOES = {
   2: {
     critica: [
-      { autor: "Helena Duarte", veiculo: "Jornal da Tela", fresco: true, texto: "A sequência da criação é das coisas mais bonitas que o cinema fez nos últimos anos." },
-      { autor: "Rodrigo Pires", veiculo: "Plano Aberto", fresco: true, texto: "Um épico contemplativo que confia no silêncio e na imagem." },
-      { autor: "Sofia Ramos", veiculo: "Cine Pauta", fresco: true, texto: "Transforma um mito de origem em drama familiar entre deuses, e funciona." },
+      { autor: "Jamile Nogueira", veiculo: "", fresco: true, texto: "Entrei na sessão sem saber absolutamente nada da história e, logo no primeiro ato, fiquei completamente presa à tela. Os dez minutos iniciais são só aquele oceano escuro, infinito e sem fim, o tal do Num, e, surpreendentemente, é uma das sequências visuais mais hipnotizantes do filme. Ver aquela primeira ilhota de lama emergindo das águas profundas para dar lugar ao ovo cósmico de onde nasce Atum (que já chega se fundindo a Rá para botar ordem no caos) é de querer aplaudir de pé.\nO 'elenco de apoio' rouba a cena do início ao fim. A deusa Nut passa o filme inteiro curvada como uma abóbada coberta de estrelas sobre o irmão Geb, minha coluna doeu só de olhar a posição dela! enquanto o coitado do Chu, o Ar, sustenta o céu sozinho sem levar um único crédito no cartaz. Além disso, a sacada de usar a geografia do Nilo como a verdadeira bússola narrativa do longa é brilhante.\nA minha única grande bronca é a bagunça do roteiro no segundo ato. O filme simplesmente resolve recomeçar a história do nada trazendo outras versões da criação: primeiro o ovo e Atum, depois do nada vira um lótus, e em seguida o Céu vira uma vaca gigante sustentada por quatro deuses... Fica a sensação nítida de que cada roteirista entregou um tratamento diferente e o estúdio resolveu aprovar todos de uma vez sem cortar ninguém na montagem final.\nVeredito: Apesar do tropeço estrutural no meio do longa, ver o caos virar ordem com um elenco divino tão afiado vale cada centavo do ingresso. Recomendo fortemente assistir em uma noite bem estrelada, em justa homenagem à Nut!!!!" },
+      { autor: "Helena Duarte", veiculo: "Jornal da Tela", fresco: true, texto: "A sequência da criação é das coisas mais bonitas que o cinema fez nos últimos anos. Del Toro filma o nascimento do mundo com a paciência de quem pinta um afresco, e os cenários feitos à mão dão à mitologia uma textura que a computação gráfica raramente alcança." },
+      { autor: "Rodrigo Pires", veiculo: "Plano Aberto", fresco: true, texto: "Um épico contemplativo que confia no silêncio e na imagem. Os primeiros minutos, só com o oceano primordial, vão testar a paciência de parte do público, mas são eles que preparam o impacto do que vem depois. Uma aposta arriscada para um filme desse tamanho, e por isso mesmo admirável." },
+      { autor: "Sofia Ramos", veiculo: "Cine Pauta", fresco: true, texto: "Transforma um mito de origem em drama familiar entre deuses, e funciona. A relação entre Geb e Nut, separados à força por Chu, tem mais emoção do que muito romance recente. O roteiro tropeça ao alternar versões da criação no segundo ato, mas nunca perde o fio." },
     ],
     publico: [
       { nome: "Bruna L.", estrelas: 5, texto: "Visual de outro mundo. Vale ver na maior tela possível." },
       { nome: "Diego F.", estrelas: 4, texto: "Lindo, mas exige paciência na primeira meia hora." },
+      { nome: "Ana Paula S.", estrelas: 5, texto: "Que experiência linda! A cena da Nut se curvando sobre o Geb, toda coberta de estrelas, é de tirar o fôlego. Nunca imaginei que um filme sobre a criação do mundo pudesse ser tão emocionante. Saí do cinema olhando pro céu." },
+      { nome: "João Pedro M.", estrelas: 4, texto: "Muito bom! O visual é impressionante e dá pra ver o capricho do del Toro em cada detalhe dos cenários. O começo é mais lento, só com o oceano escuro, mas quando a história engata fica muito bom. Recomendo." },
+      { nome: "Larissa Oliveira", estrelas: 5, texto: "Fui com meu namorado sem saber nada de mitologia egípcia e saímos os dois apaixonados. A trilha sonora é maravilhosa e a parte do ovo cósmico é linda demais. Já estamos planejando ver de novo." },
+      { nome: "Marcos Vinícius", estrelas: 5, texto: "Simplesmente perfeito. Daqueles filmes que valem a pena ver na maior tela possível. O Chu segurando o céu sozinho virou meu personagem favorito, kkkk. Melhor filme que vi esse ano, sem dúvida." },
     ],
   },
   3: {
@@ -109,13 +119,17 @@ const AVALIACOES = {
   },
   4: {
     critica: [
-      { autor: "Clara Mendes", veiculo: "Blog Contraplano", fresco: true, texto: "Uma história de amor e luto contada com delicadeza rara." },
-      { autor: "Helena Duarte", veiculo: "Jornal da Tela", fresco: true, texto: "Ísis é a heroína mais forte do cinema em muito tempo." },
-      { autor: "Rodrigo Pires", veiculo: "Plano Aberto", fresco: false, texto: "Bonito, porém longo demais. Perde força na metade." },
+      { autor: "Isabella Camargo", veiculo: "", fresco: true, texto: "Eu comecei essa história esperando um romance mitológico e terminei pensando que o maior perigo do Egito Antigo talvez fosse ter um irmão chamado Seth.\nOsíris era um rei tão bom que ensinou os egípcios a plantar, colher e viver em sociedade. Ao lado de Ísis, sua esposa e também irmã, governava uma terra próspera. Tudo parecia perfeito, até que seu irmão Seth, movido pela inveja e pela ambição de tomar o trono, decidiu que resolver as coisas na conversa definitivamente não era uma opção.\nO plano? Uma festa, um caixão belíssimo e uma proposta aparentemente inocente: quem coubesse perfeitamente nele ficaria com o presente. O detalhe é que o caixão tinha sido feito sob medida para Osíris. O rei entra, Seth fecha a tampa e joga tudo no Nilo. Sinceramente, eu teria desconfiado do convite.\nÉ aí que Ísis assume o protagonismo. Determinada a encontrar o marido, ela embarca em uma jornada que renderia facilmente uma trilogia. Depois de encontrar o corpo, precisa enfrentar mais uma crueldade de Seth, que o despedaça e espalha seus restos pelo Egito. Sim, o vilão realmente achou que matar o próprio irmão duas vezes era uma boa ideia.\nCom a ajuda de Néftis, sua irmã, Ísis começa a busca pelos pedaços de Osíris. E aqui o filme ganha pontos: em vez de uma protagonista esperando ser salva, temos uma deusa inteligente, poderosa e obstinada, movida pelo amor, mas também por uma força que vai muito além dele. Com seus poderes mágicos, ela reúne e restaura o corpo do marido, contando também com os ritos funerários associados a Anúbis.\nEm uma das versões mais conhecidas do mito, Ísis consegue reanimar Osíris por tempo suficiente para conceber Hórus, que mais tarde disputaria o direito ao trono com Seth. Osíris, então, passa a reinar sobre os mortos. Uma reviravolta que eu não esperava: o protagonista perde o reino dos vivos, mas acaba assumindo um dos cargos mais importantes da mitologia egípcia.\nBrincadeiras à parte, o que torna essa história tão interessante é que ela não fala apenas de vingança ou de um romance impossível. Fala sobre morte, continuidade da vida, legitimidade do poder e renovação. Osíris se torna uma figura central nas crenças sobre o além e o renascimento, enquanto Ísis representa uma força capaz de enfrentar até mesmo a destruição.\nMinha única crítica é que ninguém nessa família parece conhecer a palavra limites. Seth é aquele personagem que você odeia, mas não consegue parar de assistir. Ísis, por outro lado, carrega a história inteira e merece todos os prêmios.\nVeredito: uma história sobre amor, traição e renascimento, com uma protagonista extraordinária e um conflito familiar que faz qualquer almoço de domingo parecer tranquilo.\nAssistiria de novo? Com certeza. Mas, se me convidarem para uma festa com um caixão de presente, vou passar.\n\nFavoritado pela Ísis. Cancelado pelo Seth." },
+      { autor: "Clara Mendes", veiculo: "Blog Contraplano", fresco: true, texto: "Cameron troca a escala grandiosa de costume por algo mais íntimo, e acerta. Ísis e Osíris é, antes de tudo, um filme sobre o luto, contado com uma delicadeza rara em produções desse porte. As sequências submersas no Nilo têm algo de onírico, e a trilha sabe a hora de silenciar. Há excessos no terceiro ato, mas é difícil sair da sessão indiferente." },
+      { autor: "Helena Duarte", veiculo: "Jornal da Tela", fresco: true, texto: "Ísis é a heroína mais forte que o cinema de grande orçamento entregou em muito tempo. A protagonista não espera ser salva: investiga, negocia com os deuses e usa a magia como estratégia, não como atalho. Cameron confia na atuação central e mantém a câmera colada a cada decisão dela. O filme é dela, do primeiro ao último plano." },
+      { autor: "Rodrigo Pires", veiculo: "Plano Aberto", fresco: false, texto: "Bonito, sem dúvida. A direção de arte é impecável e a fotografia subaquática impressiona. O problema é o ritmo: com mais de duas horas, o filme perde fôlego na metade, quando a busca pelos pedaços de Osíris vira uma sucessão de episódios parecidos. Falta ao roteiro a ousadia que sobra no visual." },
     ],
     publico: [
-      { nome: "Fernanda O.", estrelas: 4, texto: "Chorei no final, não tenho vergonha de admitir." },
+      { nome: "Gustavo Henrique", estrelas: 4, texto: "Fui sem muita expectativa e saí surpreso. As cenas debaixo d'água são lindas demais e a atriz que faz a Ísis segura o filme praticamente sozinha. Só tirei uma estrela porque o Seth aparece pouco e merecia mais tempo de tela. Recomendo, principalmente numa sala com tela grande." },
       { nome: "Lucas P.", estrelas: 3, texto: "Gostei, mas esperava mais da parte do Seth." },
+      { nome: "Bia Fonseca", estrelas: 5, texto: "Que filme!! Chorei do começo ao fim. A história de amor dos dois é muito bem contada e a trilha sonora é de arrepiar. Melhor filme do Cameron desde Titanic, na minha opinião. Já quero assistir de novo." },
+      { nome: "Fernanda O.", estrelas: 4, texto: "Chorei no final, não tenho vergonha de admitir." },
+      { nome: "Marina T.", estrelas: 3, texto: "Achei bonito e a Ísis é incrível, mas o filme é arrastado. Tem uma parte no meio que parece que não sai do lugar, fiquei olhando o relógio. O final compensa um pouco. Vale ver no cinema pelo visual, mas não é tudo isso que estão falando." },
     ],
   },
   5: {
@@ -243,7 +257,7 @@ function Cabecalho({ busca, setBusca, aba, setAba }) {
           <span className="font-display font-black text-2xl uppercase tracking-wide">Tomatada<span className="text-tomato">.</span></span>
         </a>
         <nav className="flex gap-1 text-sm" aria-label="Seções">
-          {[["filmes", "Filmes"], ["noticias", "Notícias"]].map(([id, nome]) => (
+          {[["filmes", "Filmes"], ["noticias", "Notícias"], ["criticos", "Críticos"]].map(([id, nome]) => (
             <button key={id} onClick={() => setAba(id)} aria-current={aba === id ? "page" : undefined}
               className={`px-3 py-1.5 rounded-full transition-colors ${aba === id ? "bg-panel text-fg font-semibold" : "text-mute hover:text-fg"}`}>{nome}</button>
           ))}
@@ -252,7 +266,7 @@ function Cabecalho({ busca, setBusca, aba, setAba }) {
           <label htmlFor="busca" className="sr-only">Buscar filmes</label>
           <div className="flex items-center gap-2 bg-panel border border-line rounded-full px-4 py-2 focus-within:border-corn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--mute)" strokeWidth="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
-            <input id="busca" value={busca} onChange={e => setBusca(e.target.value)} placeholder={aba === "noticias" ? "Buscar notícias" : "Buscar por título, diretor ou gênero"} className="bg-transparent outline-none flex-1 min-w-0 text-sm placeholder:text-mute" />
+            <input id="busca" value={busca} onChange={e => setBusca(e.target.value)} placeholder={aba === "noticias" ? "Buscar notícias" : aba === "criticos" ? "Buscar críticos" : "Buscar por título, diretor ou gênero"} className="bg-transparent outline-none flex-1 min-w-0 text-sm placeholder:text-mute" />
             {busca && <button type="button" onClick={() => setBusca("")} className="text-mute hover:text-fg text-xs uppercase tracking-wider">Limpar</button>}
           </div>
         </form>
@@ -471,7 +485,7 @@ function Modal({ filme, onClose, onVerSessoes, bloqueado }) {
                   <div className="shrink-0 pt-0.5"><Tomate nota={c.certificado ? 90 : c.fresco ? 70 : 0} size={c.certificado ? 24 : 20} /></div>
                   <div className="min-w-0">
                     <p className="text-sm leading-relaxed whitespace-pre-line">{c.texto}</p>
-                    <p className="text-xs text-mute mt-1">{c.autor}, {c.veiculo}</p>
+                    <p className="text-xs text-mute mt-1">{c.autor}{c.veiculo ? `, ${c.veiculo}` : ""}</p>
                   </div>
                 </li>
               ))}
@@ -700,6 +714,62 @@ function SessoesModal({ filme, onClose }) {
   );
 }
 
+/* ---------- Nossos críticos ---------- */
+const CRITICOS = [{"nome": "Mônica Ambiel Maschieto", "ra": "25019617", "filmeId": 5, "assinatura": "Mônica Ambiel", "bio": "Saiu do cinema desidratada e transformada, e ainda assim voltou para escrever.", "barras": "1101001110011100101100110011011001011110001010011100110110010100001100011101011"}, {"nome": "Isabella Ribeiro Camargo", "ra": "25021298", "filmeId": 4, "assinatura": "Isabella Camargo", "bio": "Especialista em brigas de família divinas. Não aceita convites para festas com caixão de presente.", "barras": "1101001110011100101100110011001101011001110011110100010100011101101100011101011"}, {"nome": "Jamile Fernanda Nogueira", "ra": "25013367", "filmeId": 2, "assinatura": "Jamile Nogueira", "bio": "Assiste a qualquer épico desde que seja numa noite estrelada, em homenagem à Nut.", "barras": "1101001110011100101100110011011001010001100010000101100111100101001100011101011"}, {"nome": "Stephany Moreira dos Santos", "ra": "25021233", "filmeId": 3, "assinatura": "Stephany Moreira", "bio": "Mede a tensão de um filme pelo número de portas que a barca atravessa.", "barras": "1101001110011100101100110011001101011001110010100011000101111000101100011101011"}];
+
+function CodigoBarras({ bits, ra }) {
+  const w = bits.length;
+  return (
+    <div className="inline-flex flex-col items-center">
+      <svg viewBox={`0 0 ${w} 30`} width={w * 1.6} height="40" preserveAspectRatio="none" aria-hidden="true" className="max-w-full">
+        {[...bits].map((b, i) => b === "1" ? <rect key={i} x={i} y="0" width="1" height="30" fill="#d4af37" /> : null)}
+      </svg>
+      <span className="font-mono text-[11px] tracking-[.3em] text-[#d4af37] mt-1 nums">{ra}</span>
+    </div>
+  );
+}
+
+function PaginaCriticos({ busca, onAbrirFilme }) {
+  const norm = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const q = norm(busca.trim());
+  const lista = CRITICOS.filter(c => !q || norm(c.nome).includes(q));
+  return (
+    <main className="gutter max-w-7xl mx-auto py-8">
+      <h2 className="font-display font-extrabold uppercase text-3xl tracking-wide">Nossos críticos</h2>
+      <p className="text-sm text-mute max-w-2xl mt-1">A bancada que assiste, discute e dá a palavra final sobre cada estreia da Tomatada.</p>
+      <div className="mt-6 grid sm:grid-cols-2 gap-5">
+        {lista.map(c => {
+          const filme = FILMES.find(f => f.id === c.filmeId);
+          const iniciais = c.nome.split(" ").filter(p => p.length > 2).slice(0, 2).map(p => p[0]).join("");
+          return (
+            <article key={c.ra} className="rounded-lg border border-line bg-panel p-5 flex flex-col gap-4 min-w-0">
+              <div className="flex items-center gap-4 min-w-0">
+                <div className="shrink-0 w-14 h-14 rounded-full border-2 border-[#d4af37] flex items-center justify-center font-display font-black text-xl text-[#d4af37]">{iniciais}</div>
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-lg leading-tight">{c.nome}</h3>
+                  <div className="text-[11px] uppercase tracking-[.15em] text-mute mt-1">Crítica Tomatada</div>
+                </div>
+              </div>
+              <p className="text-sm text-fg/85 leading-relaxed italic">{c.bio}</p>
+              <div className="flex flex-wrap items-end justify-between gap-4 pt-4 border-t border-line">
+                <div>
+                  <div className="text-[10px] uppercase tracking-[.2em] text-mute mb-2">Credencial de imprensa</div>
+                  <CodigoBarras bits={c.barras} ra={c.ra} />
+                </div>
+                <button onClick={() => onAbrirFilme(filme)} className="flex items-center gap-2 text-left text-sm hover:text-corn">
+                  <div className="w-9 shrink-0 rounded overflow-hidden"><Poster filme={filme} className="aspect-[2/3]" /></div>
+                  <span className="min-w-0"><span className="block text-[10px] uppercase tracking-wider text-mute">Crítica de</span><span className="font-semibold">{filme.titulo}</span></span>
+                </button>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {!lista.length && <p className="py-16 text-center text-mute">Nenhum crítico encontrado para essa busca.</p>}
+    </main>
+  );
+}
+
 function App() {
   const [busca, setBusca] = useState("");
   const [soEmCartaz, setSoEmCartaz] = useState(false);
@@ -743,7 +813,7 @@ function App() {
       <Cabecalho busca={busca} setBusca={setBusca} aba={aba} setAba={setAba} />
       {!busca && aba === "filmes" && <Destaque filme={destaque} onAbrir={setAberto} onSessoes={setSessoesDe} />}
 
-      {aba === "noticias" ? <PaginaNoticias busca={busca} onAbrir={setNoticia} /> : (
+      {aba === "criticos" ? <PaginaCriticos busca={busca} onAbrirFilme={setAberto} /> : aba === "noticias" ? <PaginaNoticias busca={busca} onAbrir={setNoticia} /> : (
       <main className="gutter max-w-7xl mx-auto py-8">
         <div className="flex flex-wrap items-end justify-between gap-4 mb-5">
           <div>
